@@ -68,7 +68,7 @@ age=st.sidebar.selectbox("What is the age of your car:",(0,1,2,3))
 # Other inputs...
 
 # Load machine learning model
-model_rf = pickle.load(open("rf_pipe_model", "rb"))
+model_rf = pickle.load(open("best_model", "rb"))
 
 # Prepare input for prediction
 my_dict = {

@@ -64,7 +64,7 @@ make_model = st.sidebar.selectbox("Select Auto Brand - Model", df["make_model"].
 gearbox = st.sidebar.selectbox("Select Gearbox", df["gearbox"].unique(), index=1)
 drivetrain = st.sidebar.selectbox("Select Drivetrain", df["drivetrain"].unique(), index=1)
 power_kw = st.sidebar.number_input("Enter Power (in kW)", min_value=df["power_kW"].min(), max_value=df["power_kW"].max(), value=df["power_kW"].mode().iloc[0], step=1.0)
-
+age=st.sidebar.selectbox("Age of your car:",(0,1,2,3))
 # Load machine learning model
 model_rf = pickle.load(open("best_model", "rb"))
 
